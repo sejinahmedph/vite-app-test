@@ -3,11 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Outlet } from 'react-router-dom'
-import { app } from './Backend/Firebase/Config/firebase.config'
 
 function App() {
   const [count, setCount] = useState(0)
-  console.log(app)
+  
+  fetch('https://www.youtube.com/')
+  .then(res => res.json())
+  .then(data => console.log(data))
   return (
     <>
       <div>
